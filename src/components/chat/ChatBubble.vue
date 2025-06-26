@@ -11,7 +11,7 @@
     <div v-else class="flex">
         <div class="bg-gray-300 text-black p-2 rounded-lg max-w-xs">
             <span class="capitalize">{{ message }}</span>
-            <img v-if="image" :src="image" alt="" class="w-52 h-52 object-cover rounded-md">
+            <img v-if="image" :src="image" alt="YesNoResponse" class="w-52 h-52 object-cover rounded-md">
         </div>
     </div>
 </template>
