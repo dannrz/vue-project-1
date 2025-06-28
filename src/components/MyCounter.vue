@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import { computed, ref, type ComputedRef, type Ref } from 'vue'
+import { useCounter } from '@/composables/useCounter'
 
-const props = defineProps<{ value?: number }>()
-const count: Ref<number> = ref(props.value ?? 10)
-const square: ComputedRef<number> = computed(() => count.value * count.value)
+interface Props {
+    value: number
+}
+
+const props = defineProps<Props>()
+
+const { count, square } = useCounter(props.value)
 
 
 </script>
